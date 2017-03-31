@@ -71,17 +71,26 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
         switch (v.getId())
         {
             case R.id.editmyplace_finished_button:
-                EditText nameEditText = (EditText) findViewById(R.id.editmyplace_name_edit);
-                String nme = nameEditText.getText().toString();
-                EditText descEditText = (EditText) findViewById(R.id.editmyplace_desc_edit);
-                String desc = descEditText.getText().toString();
+                EditText etName = (EditText) findViewById(R.id.editmyplace_name_edit);
+                String nme = etName.getText().toString();
+                EditText etDesc = (EditText) findViewById(R.id.editmyplace_desc_edit);
+                String desc = etDesc.getText().toString();
+                EditText latEdit = (EditText) findViewById(R.id.editmyplace_lat_edit);
+                String lat = latEdit.getText().toString();
+                EditText lonEdit = (EditText) findViewById(R.id.editmyplace_lon_edit);
+                String lon = lonEdit.getText().toString();
                 if(!editMode){
                     MyPlace place = new MyPlace(nme, desc);
+                    place.setLatitude(lat);
+                    place.setLongitude(lon);
                     MyPlacesData.getInstance().addNewPlace(place);
                 } else {
                     MyPlace place = MyPlacesData.getInstance().getPlace(position);
                     place.setName(nme);
                     place.setDesc(desc);
+                    place.setLatitude(lat);
+                    place.setLongitude(lon);
+                    MyPlacesData.getInstance().updatePlace(place);
                 }
                 setResult(Activity.RESULT_OK);
                 finish();
