@@ -64,6 +64,9 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
                 finishedButton.setEnabled(s.length() > 0);
             }
         });
+
+        Button locationButton = (Button) findViewById(R.id.editmyplace_location_button);
+        locationButton.setOnClickListener(this);
     }
 
     @Override
@@ -98,6 +101,11 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
             case R.id.editmyplace_cancel_button:
                 setResult(Activity.RESULT_CANCELED);
                 finish();
+                break;
+            case R.id.editmyplace_location_button:
+                Intent i = new Intent(this, MyPlacesMapActivity.class);
+                i.putExtra("state", MyPlacesMapActivity.SELECT_COORDINATES);
+                startActivityForResult(i,1);
                 break;
         }
     }
@@ -138,4 +146,24 @@ public class EditMyPlaceActivity extends AppCompatActivity implements View.OnCli
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        try {
+            if (resultCode == Activity.RESULT_OK) {
+                String lon = data.getExtras().getString("lon");
+                EditText lonText = (EditText) findViewById(R.id.editmyplace_lon_edit);
+                lonText.setText(lon);
+                String lat = data.getExtras().getString("lat");
+                EditText latText = (EditText) findViewById(R.id.editmyplace_lat_edit);
+                latText.setText(lat);
+            }
+
+        }
+        catch (Exception e) {
+            //TODO: handle exception
+        }
+    }
+
 }

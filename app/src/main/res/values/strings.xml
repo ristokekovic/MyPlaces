@@ -5,9 +5,9 @@
     <string name="my_places_list">My Places</string>
     <string name="about">About</string>
     <string name="about_text">
-        <i>My Places</i> is the application that will help you remember characteristics and locations of your favourite places.
-        It will be able to show your places on map and enable you to share them with your friends. Each week this application will be better and better
-        and you will earn <i>points</i> from your teaching assistant.
+        <i>My Places</i> is an Android app for keeping track of all the user's favourite places! It will help you remember characteristics and locations of the places you love!
+        You can bookmark your favourite bar, hotel or a community park in your hometown and every city that you visit, so that you know where to go next time you are in that place or you can recommend them to your friends.
+        With MyPlaces you never have to remember that stuff anymore! <i>We do that for you!</i>
     </string>
     <string name="ok">OK</string>
     <string name="title_activity_my_places_list">MyPlacesList</string>
@@ -21,4 +21,6 @@
     <string name="editmyplace_save_label">Save</string>
     <string name="editmyplace_cancel_label">Cancel</string>
     <string name="viewmyplace_finished_label">OK</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_my_places_map">Map</string>
 </resources>
