@@ -64,6 +64,9 @@ public class ViewMyPlaceActivity extends AppCompatActivity {
 
             case R.id.show_map_title:
                 msg = getString(R.string.show_map);
+                Intent map = new Intent(this, MyPlacesMapActivity.class);
+                map.putExtra("state", MyPlacesMapActivity.SHOW_MAP);
+                startActivity(map);
                 break;
 
             case R.id.my_places_list_item:
