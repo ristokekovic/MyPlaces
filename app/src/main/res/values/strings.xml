@@ -23,4 +23,7 @@
     <string name="viewmyplace_finished_label">OK</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_my_places_map">Map</string>
+    <string name="myplaces_serverlist">Places available on server</string>
+    <string name="serverlist_done_label">Done</string>
+    <string name="server_list">Get Server List</string>
 </resources>
