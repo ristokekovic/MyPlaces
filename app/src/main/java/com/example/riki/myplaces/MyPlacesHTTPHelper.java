@@ -30,7 +30,7 @@ public class MyPlacesHTTPHelper {
     {
         String retStr = "";
         try{
-            URL url = new URL("http://192.168.0.103:8080");
+            URL url = new URL("http://10.66.146.35:8080");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(10000);
             conn.setConnectTimeout(15000);
@@ -94,7 +94,7 @@ public class MyPlacesHTTPHelper {
     {
         List<String> names = new ArrayList<String>();
         try{
-            URL url = new URL("http://192.168.0.103:8080");
+            URL url = new URL("http://10.66.146.35:8080");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(10000);
             conn.setConnectTimeout(15000);
@@ -139,7 +139,7 @@ public class MyPlacesHTTPHelper {
     {
         MyPlace place = null;
         try {
-            URL url = new URL("http://192.168.0.103:8080");
+            URL url = new URL("http://10.66.146.35:8080");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(10000);
             conn.setConnectTimeout(15000);

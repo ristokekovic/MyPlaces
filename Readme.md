@@ -1,6 +1,6 @@
-# MyPlaces
+# Zmurke
 
-MyPlaces is an Android app for keeping track of all the user's favourite places! It will help you remember characteristics and locations of the places you love! You can bookmark your favourite bar, hotel or a community park in your hometown and every city that you visit, so that you know where to go next time you are in that place or you can recommend them to your friends. With MyPlaces you never have to remember that stuff anymore! We do that for you!
+Zmurke is an Android app that simulates the popular game Hide & Seek on your Android device! It uses Google Maps and your GPS location to track you and your friends and when they get close to you, they will appear on your map and the hunt can begin! Add your friends via Bluetooth and let the game begin!
 
 Also check out [some of my other projects](https://github.com/Risto995).
 
